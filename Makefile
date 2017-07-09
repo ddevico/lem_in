@@ -38,7 +38,7 @@ OBJ = $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
 LIB = $(addprefix $(LIB_PATH)/,$(LIB_NAME))
 INC = $(addprefix $(INC_PATH)/,$(INC_NAME))
 
-all: $(NAME) norminette1 norminette2
+all: $(NAME)
 
 $(NAME): $(addprefix $(OBJ_PATH)/,$(SRC_NAME:.c=.o))
 	@echo LINKING FILLER FROM OBJECTS FILES...
@@ -61,10 +61,3 @@ fclean: clean
 
 re: fclean all
 
-norminette1:
-	@echo --------------------------------------------------------------------
-	@norminette $(SRC)
-norminette2:
-	@echo --------------------------------------------------------------------
-	@norminette $(INC)
-	@echo --------------------------------------------------------------------
