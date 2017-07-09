@@ -40,7 +40,9 @@ The number in the first line is the number of ants
 lines starting with # are coments
 lines in the format a-b represent a connection between a and b
 
+### Start the program
 
-The coordinates of the houses are given just for people who wanna make a graphic representation, and make no difference whatsoever in finding the shortest path, as it's based on number of turns and not distance travelled.
+- ```Make```
+- ```./lem_in [test/*] ```
 
-The algorithm chosen was dijkstra algorithm, where the default distance between paths was 1, and was increased by 1 if there was already an ant in the house, and by n if there were n ants waiting in line to go to that house. With that, if there is a path with a nodes until the finish and a path with b nodes until the finish, where b > a, it will be more beneficial for an ant to take the path with b nodes if there are at least b - a - 1 ants waiting to go to the path with a nodes, and the path with b nodes is clear.
+
